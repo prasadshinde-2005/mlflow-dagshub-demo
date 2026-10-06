@@ -10,6 +10,10 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, confusion_matrix
 import os
 
+import dagshub
+dagshub.init(repo_owner='prasadshinde-2005', repo_name='mlflow-dagshub-demo', mlflow=True)
+
+
 # for using mlrun
 os.environ["MLFLOW_ALLOW_FILE_STORE"] = "true"
 
