@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/Hp/Downloads/Mlops/mlflow-dagshub-demo/mlruns/965392676672332688/b180cd2bfac54ee88dbc0eb73098b809/artifacts
+end_time: 1791303652520
+entry_point_name: ''
+experiment_id: '965392676672332688'
+lifecycle_stage: active
+run_id: b180cd2bfac54ee88dbc0eb73098b809
+run_name: sp-exp_plot
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1791303631116
+status: 3
+tags: []
+user_id: prasadshinde-2005

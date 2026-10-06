@@ -19,6 +19,14 @@ mlflow.set_tracking_uri(
     "https://dagshub.com/prasadshinde-2005/mlflow-dagshub-demo.mlflow"
 )
 
+
+# for using mlrun
+os.environ["MLFLOW_ALLOW_FILE_STORE"] = "true"
+
+mlflow.set_tracking_uri("file:./mlruns")
+
+
+
 # import iris 
 iris = load_iris()
 X = iris.data
@@ -28,21 +36,21 @@ y = iris.target
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 # Parmeters 
-max_depth = 20
-n_estimators = 50
+max_depth = 10
 
 
-mlflow.set_experiment("iris_Random_forest")
 
-with mlflow.start_run():
-    rf = RandomForestClassifier(max_depth=max_depth , n_estimators = n_estimators, random_state=42)
-    rf.fit(X_train, y_train)
-    y_pred = rf.predict(X_test)
+mlflow.set_experiment("iris_decision_tree")
+
+with mlflow.start_run(run_name ="sp-exp_plot"):
+    DT = DecisionTreeClassifier(max_depth=max_depth, random_state=42)
+    DT.fit(X_train, y_train)
+    y_pred = DT.predict(X_test)
     accuracy = accuracy_score(y_test, y_pred)
     cm = confusion_matrix(y_test ,y_pred)
 
     mlflow.log_metric("accuracy", accuracy)
-    mlflow.log_param("n_estimators" , n_estimators)
+    
     mlflow.log_param("max_depth", max_depth)
   
     print("Accuracy:", accuracy)
@@ -63,6 +71,5 @@ with mlflow.start_run():
 
     # ---- MLflow ko artifact ke roop mein log karo ----
     mlflow.log_artifact("confusion_matrix.png")
-
     mlflow.log_artifact(__file__)
-    mlflow.sklearn.log_model(rf , "Random_forest", serialization_format ="pickle")
+    mlflow.sklearn.log_model(DT , "decision_tree", serialization_format ="pickle")

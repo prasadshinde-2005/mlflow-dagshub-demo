@@ -1,0 +1,23 @@
+artifact_path: file:///C:/Users/Hp/Downloads/Mlops/mlflow-dagshub-demo/mlruns/965392676672332688/models/m-53f497e0a97a48e38dd7748fb88d2ecc/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.1
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: pickle
+    sklearn_version: 1.9.1
+    skops_trusted_types: null
+mlflow_version: 3.16.1
+model_id: m-53f497e0a97a48e38dd7748fb88d2ecc
+model_size_bytes: 2791
+model_uuid: m-53f497e0a97a48e38dd7748fb88d2ecc
+prompts: null
+run_id: b180cd2bfac54ee88dbc0eb73098b809
+utc_time_created: '2026-10-06 16:20:32.201497'

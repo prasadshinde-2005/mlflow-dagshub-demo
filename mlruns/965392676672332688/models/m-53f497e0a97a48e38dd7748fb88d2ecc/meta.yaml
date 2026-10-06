@@ -1,0 +1,10 @@
+artifact_location: file:///C:/Users/Hp/Downloads/Mlops/mlflow-dagshub-demo/mlruns/965392676672332688/models/m-53f497e0a97a48e38dd7748fb88d2ecc/artifacts
+creation_timestamp: 1791303632120
+experiment_id: '965392676672332688'
+last_updated_timestamp: 1791303652494
+model_id: m-53f497e0a97a48e38dd7748fb88d2ecc
+model_type: null
+name: decision_tree
+source_run_id: b180cd2bfac54ee88dbc0eb73098b809
+status: 2
+status_message: null

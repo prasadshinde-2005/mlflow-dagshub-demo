@@ -1,0 +1,9 @@
+artifact_location: file:///C:/Users/Hp/Downloads/Mlops/mlflow-dagshub-demo/mlruns/965392676672332688
+creation_time: 1791303310703
+effective_trace_archival_retention: null
+experiment_id: '965392676672332688'
+last_update_time: 1791303310703
+lifecycle_stage: active
+name: iris_decision_tree
+trace_location: null
+workspace: default
